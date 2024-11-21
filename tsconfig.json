@@ -1,9 +1,13 @@
 {
   "compilerOptions": {
-    "jsx": "react-jsx",
+    "noEmit": true, 
+    "esModuleInterop": true, // CommonJS モジュールをサポート
+    "skipLibCheck": true,    // ライブラリの型チェックをスキップ（オプション）
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "@/*": ["src/*"]
+    },
+    "jsx": "react-jsx",      // React JSX サポート
+    "moduleResolution": "node", // モジュール解決方法を Node.js スタイルに設定
   }
 }

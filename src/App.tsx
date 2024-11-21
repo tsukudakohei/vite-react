@@ -10,7 +10,7 @@ import { Question } from '@/types/questions';
 const allQuestions: Question[] = [...alphabetQuestions, ...mathQuestions, ...patternQuestions];
 const QUESTIONS_PER_SET = 10;
 
-export default function App() {
+const App = () => {
   const [currentSet, setCurrentSet] = useState(0);
   const [answers, setAnswers] = useState<string[]>(Array(allQuestions.length).fill(''));
   const [isCompleted, setIsCompleted] = useState(false);
@@ -110,3 +110,5 @@ export default function App() {
     </div>
   );
 }
+
+export default App;
