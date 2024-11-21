@@ -23,12 +23,12 @@ export function QuestionCard({
       return (
         <div className="space-y-4">
           <img 
-            src={question.questionImage} 
+            src={`/images/${question.questionImage.split('/').pop()}`} 
             alt="Pattern Question" 
             className="mx-auto max-w-full h-auto"
           />
           <img 
-            src={question.choicesImage} 
+            src={`/images/${question.choicesImage.split('/').pop()}`} 
             alt="Pattern Choices" 
             className="mx-auto max-w-full h-auto"
           />
