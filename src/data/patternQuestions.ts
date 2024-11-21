@@ -54,7 +54,7 @@ export const patternQuestions: PatternQuestion[] = [
     questionImage: '/images/13.png',
     choicesImage: '/images/14.png',
     choices: ["A", "B", "C", "D", "E", "F"],
-    answer: "D",
+    answer: "F",
     type: 'pattern'
   },
   {
@@ -62,7 +62,7 @@ export const patternQuestions: PatternQuestion[] = [
     questionImage: '/images/15.png',
     choicesImage: '/images/16.png',
     choices: ["A", "B", "C", "D", "E", "F"],
-    answer: "A",
+    answer: "F",
     type: 'pattern'
   },
   {
@@ -70,7 +70,7 @@ export const patternQuestions: PatternQuestion[] = [
     questionImage: '/images/17.png',
     choicesImage: '/images/18.png',
     choices: ["A", "B", "C", "D", "E", "F"],
-    answer: "C",
+    answer: "F",
     type: 'pattern'
   },
   {
@@ -78,7 +78,7 @@ export const patternQuestions: PatternQuestion[] = [
     questionImage: '/images/19.png',
     choicesImage: '/images/20.png',
     choices: ["A", "B", "C", "D", "E", "F"],
-    answer: "E",
+    answer: "C",
     type: 'pattern'
   },
   {
@@ -94,7 +94,7 @@ export const patternQuestions: PatternQuestion[] = [
     questionImage: '/images/23.png',
     choicesImage: '/images/24.png',
     choices: ["A", "B", "C", "D", "E", "F"],
-    answer: "F",
+    answer: "D",
     type: 'pattern'
   }
 ]

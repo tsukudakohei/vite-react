@@ -66,9 +66,9 @@ export const alphabetQuestions: AlphabetQuestion[] = [
   },
   {
     id: 10,
-    pattern: 'm n c p q c s t c ❓',
-    choices: ['c', 'd', 'n', 'u', 'v'],
-    answer: 'u',
+    pattern: 'b c c d e e f g ❓',
+    choices: ['e', 'f', 'g', 'h', 'i'],
+    answer: 'g',
     type: 'alphabet',
   },
   {
@@ -241,9 +241,9 @@ export const alphabetQuestions: AlphabetQuestion[] = [
   },
   {
     id: 35,
-    pattern: 'c q r e u v g ❓',
-    choices: ['v', 'w', 'x', 'y', 'z'],
-    answer: 'x',
+    pattern: 'a c e g b d f h c e g i ❓',
+    choices: ['j', 'k', 'l', 'm', 'n'],
+    answer: 'j',
     type: 'alphabet',
   },
   {
