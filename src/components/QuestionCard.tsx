@@ -49,7 +49,7 @@ export function QuestionCard({
     : question.choices;
 
   return (
-    <Card className="mb-6">
+    <Card className="mb-6 w-full max-w-full overflow-hidden"> 
       <CardHeader>
         <CardTitle className="flex items-center">
           <span className="bg-blue-500 text-white px-3 py-1 rounded-md text-sm font-medium mr-2">
@@ -58,7 +58,7 @@ export function QuestionCard({
           {question.type !== 'pattern' && renderQuestionContent()}
         </CardTitle>
       </CardHeader>
-      <CardContent>
+      <CardContent className="px-4 sm:px-6">
         {question.type === 'pattern' && renderQuestionContent()}
         
         {showResults && (

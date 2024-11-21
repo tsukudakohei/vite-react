@@ -46,7 +46,7 @@ const App = () => {
   if (isCompleted) {
     const score = calculateScore();
     return (
-      <div className="max-w-4xl mx-auto p-6 space-y-8">
+      <div className="max-w-4xl mx-auto p-2 sm:p-6 space-y-8 w-full">
         <Card className="w-full mb-6">
           <CardHeader>
             <CardTitle>テスト結果</CardTitle>
