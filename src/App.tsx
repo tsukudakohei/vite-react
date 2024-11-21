@@ -81,6 +81,13 @@ const App = () => {
 
   return (
     <div className="max-w-4xl mx-auto p-6 space-y-8">
+      <div className="items-center mb-6">
+        <h2 className="text-2xl font-bold mb-2">全部で77問あります</h2>
+        <p className="text-1xl">
+          ※画面をリロードすると、セットがリセットされます。<br />
+          更新せずに、回答してください。
+        </p>
+      </div>
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-2xl font-bold">第{currentSet + 1}セット</h2>        
       </div>
