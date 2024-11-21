@@ -6,7 +6,10 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'), // エイリアスを設定
+      '@': path.resolve(__dirname, './src'),
     },
+  },
+  build: {
+    assetsInlineLimit: 0, // アセットファイルは常に分離して出力
   },
 });
