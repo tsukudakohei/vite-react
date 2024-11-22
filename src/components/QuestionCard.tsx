@@ -21,16 +21,16 @@ export function QuestionCard({
   const renderQuestionContent = () => {
     if (question.type === 'pattern') {
       return (
-        <div className="space-y-4 w-full overflow-x-hidden"> {/* w-fullとoverflow-x-hiddenを追加 */}
+        <div className="space-y-4 w-full overflow-x-hidden"> 
           <img 
             src={question.questionImage} 
             alt="Pattern Question" 
-            className="mx-auto max-w-full h-auto object-contain" /* object-containを追加 */
+            className="mx-auto max-w-full h-auto object-contain" 
           />
           <img 
             src={question.choicesImage} 
             alt="Pattern Choices" 
-            className="mx-auto max-w-full h-auto object-contain" /* object-containを追加 */
+            className="mx-auto max-w-full h-auto object-contain"
           />
         </div>
       );
@@ -51,7 +51,7 @@ export function QuestionCard({
     return (
       <Card className="mb-6 w-full overflow-hidden"> {/* max-w-fullを削除し、w-fullを追加 */}
         <CardHeader className="w-full">
-          <CardTitle className="flex items-center">
+          <CardTitle className="flex flex-col items-start gap-1">
             <span className="bg-blue-500 text-white px-3 py-1 rounded-md text-sm font-medium mr-2">
               第{questionIndex + 1}問
             </span>
@@ -76,10 +76,10 @@ export function QuestionCard({
         <RadioGroup
           value={selectedAnswer}
           onValueChange={onAnswerSelect}
-          className="flex space-x-4"
+          className="flex space-x-4 flex-wrap"
         >
           {choices.map((choice, choiceIndex) => (
-            <div key={choiceIndex} className="flex flex-col items-center space-y-2">
+            <div key={choiceIndex} className="flex flex-col items-center space-y-2 ">
               <div className="w-12 h-12 border flex items-center justify-center text-xl text-navy-600">
                 {choice}
               </div>
