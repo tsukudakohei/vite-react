@@ -21,16 +21,16 @@ export function QuestionCard({
   const renderQuestionContent = () => {
     if (question.type === 'pattern') {
       return (
-        <div className="space-y-4">
+        <div className="space-y-4 w-full overflow-x-hidden"> {/* w-fullとoverflow-x-hiddenを追加 */}
           <img 
-            src={`/images/${question.questionImage.split('/').pop()}`} 
+            src={question.questionImage} 
             alt="Pattern Question" 
-            className="mx-auto max-w-full h-auto"
+            className="mx-auto max-w-full h-auto object-contain" /* object-containを追加 */
           />
           <img 
-            src={`/images/${question.choicesImage.split('/').pop()}`} 
+            src={question.choicesImage} 
             alt="Pattern Choices" 
-            className="mx-auto max-w-full h-auto"
+            className="mx-auto max-w-full h-auto object-contain" /* object-containを追加 */
           />
         </div>
       );
@@ -48,18 +48,18 @@ export function QuestionCard({
     ? question.choices.map(c => c.value)
     : question.choices;
 
-  return (
-    <Card className="mb-6 w-full max-w-full overflow-hidden"> 
-      <CardHeader>
-        <CardTitle className="flex items-center">
-          <span className="bg-blue-500 text-white px-3 py-1 rounded-md text-sm font-medium mr-2">
-            第{questionIndex + 1}問
-          </span>
-          {question.type !== 'pattern' && renderQuestionContent()}
-        </CardTitle>
-      </CardHeader>
-      <CardContent className="px-4 sm:px-6">
-        {question.type === 'pattern' && renderQuestionContent()}
+    return (
+      <Card className="mb-6 w-full overflow-hidden"> {/* max-w-fullを削除し、w-fullを追加 */}
+        <CardHeader className="w-full">
+          <CardTitle className="flex items-center">
+            <span className="bg-blue-500 text-white px-3 py-1 rounded-md text-sm font-medium mr-2">
+              第{questionIndex + 1}問
+            </span>
+            {question.type !== 'pattern' && renderQuestionContent()}
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="w-full px-2 sm:px-4"> {/* px-4を調整 */}
+          {question.type === 'pattern' && renderQuestionContent()}
         
         {showResults && (
           <div className="flex justify-between items-center mb-4">

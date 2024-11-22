@@ -80,7 +80,7 @@ const App = () => {
   const isLastSet = currentSet === Math.floor((allQuestions.length - 1) / QUESTIONS_PER_SET);
 
   return (
-    <div className="max-w-4xl mx-auto space-y-8 w-full"> {/* p-2とsm:p-6を削除 */}
+    <div className="w-full max-w-4xl mx-auto overflow-hidden">
       <div className="items-center mb-6 px-2"> {/* 必要な部分だけpaddingを追加 */}
         <h2 className="text-2xl font-bold mb-2">全部で77問あります</h2>
         <p className="text-1xl">
@@ -94,6 +94,7 @@ const App = () => {
       </div>
   
       {/* QuestionCardはすでにカード内でpaddingを持っているので、ここでは不要 */}
+      <div className="w-full px-2 space-y-8"> {/* w-fullを追加 */}
       {currentQuestions.map((question, index) => (
         <QuestionCard
           key={question.id}
@@ -103,6 +104,7 @@ const App = () => {
           onAnswerSelect={(value) => handleAnswer(index, value)}
         />
       ))}
+    </div>
   
       <div className="flex justify-between mt-6 px-2"> {/* 必要な部分だけpaddingを追加 */}
         <Button
